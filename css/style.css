@@ -1,0 +1,477 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+}
+body{
+    background: url("https://picsum.photos/id/368/1980/1280") fixed no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+h1{
+    font-size: 4rem;
+    transition: 1s;
+}
+#background-video{
+    z-index: -100;
+    width: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+header{
+    background: transparent;
+    color: aliceblue;
+    backdrop-filter: blur(5px);
+    padding: .5em;
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transition: .5s;
+}
+header, nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{font-weight: 100;}
+header nav a{margin: 1em;}
+a{transition: .5s;}
+a:hover{color: lime;transform: scale(1.1);}
+h2{
+    color: gold;
+    font-weight: 100;
+    font-size: 2rem;
+}
+.menu{
+    display: none;
+}
+.expand{
+    left:0;
+}
+/********************   Elements génériques     ********************/
+
+.cards{
+    display: flex;
+    gap: 2em;
+    color: white;
+    list-style: none;
+    width: 90%;
+    margin: 2em auto;
+}
+.cards>li{
+    border-radius: 1em;
+    box-shadow: 0 0 15px #444;
+    cursor: pointer;
+    transition: .2s;
+}
+.cards h3{
+    border-radius: .5em .5em 0 0;
+    min-height:3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards figure{
+    display: flex;
+    min-width: 21vw;
+    background: rgba(0,0,0,.8);
+    border-radius: 0 0 1em 1em;
+}
+/************************   Bannière    *************************/
+#banner{
+    min-height:80dvh;
+    transition: all .5s;
+}
+#banner:hover{
+    backdrop-filter: brightness(.5);
+}
+#banner>aside{
+    display: grid;
+    justify-content: space-around;
+    min-height: 20dvh;
+    max-width: 25dvw;
+    position: relative;
+    padding: 1em;
+    left:5em;
+    top: 50dvh;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,.5);
+    border-radius: .5em;
+    border: aliceblue 1px solid;
+}
+#banner h2{
+    font-weight: 100;
+}
+#banner div{
+    display: flex;
+    gap: 1em;
+}
+#banner i{
+    font-size: 1.5rem;
+}
+
+/********************************     Hero section    *************************************/
+#hero{
+    box-shadow: 0 0 15px black;
+}
+#hero article{
+    display: flex;
+}
+#hero aside{
+    min-width: 50%;
+    background: white;
+    justify-content: space-around;
+    padding: 1em;
+    align-items: center;
+}
+#hero aside div{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+}
+#hero aside span{
+    font-size: 2em;
+    display: block;
+}
+
+
+.callTo, .matrix{
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+.callTo button, .callTo [type="button"]{
+    padding: 1em;
+    width: 10dvw;
+    margin:1em auto;
+    background: rgba(0,0,0,.5);
+    color: gold;
+    border:2px solid gold; 
+}
+
+.matrix{
+    text-align: left;
+    grid-template-columns: repeat(2, 1fr);
+}
+.matrix div{
+    padding: 1em;
+}
+#hero .callTo:nth-child(1){background: url("https://picsum.photos/id/450/1980/1280") fixed no-repeat; background-size: cover;}
+#hero .callTo:nth-child(2){background: url("https://picsum.photos/id/510/1980/1280") fixed no-repeat; background-size: cover;}
+
+/****************************   Section Services    *******************************/
+#services{
+    background: aliceblue;
+    min-height: 100dvh;
+    background: url("https://picsum.photos/id/511/1980/1280") fixed no-repeat; background-size: cover;
+}
+#services article{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100dvh;
+    padding: 4em 0;
+}
+#services h3{
+    background: black;
+}
+#services figure{
+    height: 60vmin;
+    width: 60vmin;
+    padding: 2em;
+    background: rgba(0,0,0,.5);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    display: grid;
+    place-content: center;
+    line-height: 1.5em;
+    font-size: 2vmin;
+}
+#services span{
+    font-size: 10vh;
+    line-height: 20vh;
+}
+#services ul{
+    list-style-type: none;
+}
+
+/*****************************  Section Portfolio  *******************************/
+
+#portfolio{
+    width: 95%;
+    border-radius: 1em;
+    margin:3em auto;
+    padding: 5em;
+    background: rgba(0,0,0,.5); 
+    backdrop-filter: blur(15px);
+}
+#portfolio aside{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*****************************  Section Projets  *******************************/
+
+#projects{
+    opacity: 0;
+    transition: 1s;
+}
+#projects div{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin: 2em auto;
+}
+#projects figure{
+    max-width: 15dvw;
+    max-height: 24.5dvh;
+    background: lightblue;
+    box-shadow: 0 0 10px gray;
+    padding: 1em;
+    color: black;
+    transition: .7s;
+    overflow: hidden;
+}
+#projects figure:hover{
+    max-height: 100dvh;
+}
+#projects a:nth-child(even) figure{
+    background-color: aliceblue;
+}
+#projects figure:hover{
+    transform: scale(1.1);
+    cursor:pointer;
+}
+#projects figure img{
+    display: block;
+    max-width: 100%;
+}
+#projects figcaption li{
+    background: rgba(255,255,255,.5);
+    border-radius: 1em;
+    padding: .5em;
+    font-size: .8em;
+    margin: .5em;
+    list-style-type: none;
+}
+
+/************   A propos    ****************/
+
+#about{
+    background: black;
+    background-size: cover;
+    padding: 5em;
+    margin-top: 2em;
+}
+#about h2{
+    color: teal;
+    text-align: center;
+}
+#about article{
+    display: flex;
+    gap: 3em;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .5em;
+    padding: 1em;
+    background: rgba(255,255,255,.8);
+    backdrop-filter: blur(12px);
+    width: 90%;
+    margin: -7em auto;
+}
+#about img{
+    border-radius: 50%;
+    width: 10dvw;
+}
+#about p{
+    width: 90%;
+    font-variant: small-caps;
+}
+#about aside{
+    min-width: 15%;
+    text-align: right;
+}
+#about a{
+    display: block;
+    color: teal;
+    margin-bottom: 1em;
+}
+#about a p{
+    font-size: 3em;
+}
+
+/*************  Formation   **********************/
+#formation{
+    background: black;
+    overflow-x: hidden;
+    text-align: center;
+    padding: 10em 0;
+    background: url("http://mistertea.fr/selene/img/urban/2.jpg");
+}
+
+#formation img{
+    border-radius: 0 0 0 1em;
+    display: flex;
+    align-self: center;
+    max-width: 40%;
+}
+#formation .cards>li:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px black;
+}
+#formation .cards h3{
+    background: seagreen;
+}
+#formation .cards li{
+    height: 22vh;
+}
+#formation .cards figure{
+    min-height: 100%;
+}
+#formation figcaption{
+    display: grid;
+    place-content: center;
+    font-size: 1rem;
+    line-height: 1.3em;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+}
+#formation article{
+    margin: 2em auto;
+    border-radius: 1em;
+}
+#formation .description{
+    background: linear-gradient(aliceblue, whitesmoke);
+    padding: 2em;
+    line-height: 1.3em;
+}
+
+#formation article h3, #formation article div>p{
+    background: black;
+    color: lime;
+    padding: 1em;
+    font-size: 1.3rem;
+    text-align: center;
+    border-radius: 1em 1em 0 0;
+    border: 1px solid cadetblue;
+}
+#formation article div>p{
+    border-radius: 0 0 1em 1em;
+}
+#formation article div>p a{
+    color: coral;
+}
+#formation .description ul{
+    width: 60%;
+    text-align: left;
+    margin: 1em auto;
+    max-height: 100dvh;
+}
+#formation .modals{
+    position:fixed;
+    cursor: pointer;
+    top:0;
+    left:-100dvw;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    z-index: 1;
+    display: grid;
+    place-content: center;
+    backdrop-filter: blur(15px);
+    transition: left .5s;
+}
+footer{
+    background: black;
+    color: white;
+    min-height:20dvh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+footer a{
+    color:gold;
+}
+
+@media screen and (max-width:800px){
+    *{
+        padding:0;
+        margin: 0;
+        flex-wrap: wrap;
+        max-width: 100%;
+        width: 100%;
+        max-height: 100%;
+        line-height: 1.2em;
+    }
+    [type=button], button{
+        background: black;
+        text-align: left;
+    }
+    header{
+        left : -100dvw;
+    }
+
+    header .expand{
+        left : 0;
+    }
+
+    img{
+        display: block;
+        margin: auto;
+        max-width: 70%;
+    }
+
+    .menu{
+        display: block;
+        width: 4dvw;
+        position: fixed;
+        top:0;
+        right: 0;
+        z-index: 2;
+    }
+
+    #banner>aside{
+        position: static;
+        margin: auto;
+        max-width: 50%;
+    }
+
+    #banner>aside::before{
+        content: "Ruben Trottein";
+        font-size: 2rem;
+        text-align: center;
+        display: block;
+        margin-bottom: 1em;
+        font-family: monospace;
+        color: rebeccapurple;
+    }
+
+    #projects figure{
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+
+    #services article{
+        flex-direction: column;
+    }
+
+    #formation .modals{
+        display: none;
+    }
+    
+    #formation .cards li{
+        height: 100%;
+    }
+}
