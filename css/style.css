@@ -23,7 +23,6 @@ h1{
     left:0;
 }
 header{
-    background: transparent;
     color: aliceblue;
     backdrop-filter: blur(5px);
     padding: .5em;
@@ -40,6 +39,7 @@ header, nav{
     align-items: center;
 }
 header h1{font-weight: 100;}
+header a:first-child{color: orange;}
 header nav a{margin: 1em;}
 a{transition: .5s;}
 a:hover{color: lime;transform: scale(1.1);}
@@ -148,7 +148,7 @@ h2{
 }
 .callTo button, .callTo [type="button"]{
     padding: 1em;
-    width: 10dvw;
+    min-width: 10dvw;
     margin:1em auto;
     background: rgba(0,0,0,.5);
     color: gold;
@@ -169,38 +169,53 @@ h2{
 #services{
     background: aliceblue;
     min-height: 100dvh;
-    background: url("https://picsum.photos/id/511/1980/1280") fixed no-repeat; background-size: cover;
+    /*background: url("https://picsum.photos/id/511/1980/1280") fixed no-repeat; background-size: cover;*/
+    background: url("../media/gadgets-6469387_1920.jpg") fixed no-repeat; background-size: cover;
+}
+#services img{
+    width: 100%;
+    object-fit: cover;
+    height: 25vh;
+    border-radius: 1em 1em 0 0;
 }
 #services article{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1em;
     align-items: center;
-    height: 100dvh;
+    min-height: 100dvh;
     padding: 4em 0;
 }
-#services h3{
+#services h2, #services h3{
     background: black;
+    color: #eee;
+    padding: .5em;
+    width: 100%;
+    text-align: center;
 }
 #services figure{
-    height: 60vmin;
-    width: 60vmin;
-    padding: 2em;
-    background: rgba(0,0,0,.5);
+    min-height: 80vmin;
+    width: 25vw;
+    padding: 0;
+    background: #eee;
     backdrop-filter: blur(5px);
-    border-radius: 50%;
+    border-radius: 1em;
+    box-shadow: 0 0 10px #444;
+    color: black;
+    align-items: center;
+    font-size: 1.3rem;
+}
+#services figcaption p{
     text-align: center;
-    color: white;
-    display: grid;
-    place-content: center;
-    line-height: 1.5em;
-    font-size: 2vmin;
+    padding: .2em 1em;
 }
-#services span{
-    font-size: 10vh;
-    line-height: 20vh;
+#services figcaption ul{
+    padding: 0 2em;
+    list-style-type: disc;
 }
-#services ul{
-    list-style-type: none;
+#services figcaption li{
+    padding-top: .3em;
 }
 
 /*****************************  Section Portfolio  *******************************/
@@ -323,7 +338,11 @@ h2{
     border-radius: 0 0 0 1em;
     display: flex;
     align-self: center;
-    max-width: 40%;
+    width: 20dvh;
+    object-fit: contain;
+}
+#formation .cards>li{
+    height: 100%;
 }
 #formation .cards>li:hover{
     transform: scale(1.1);
@@ -332,17 +351,10 @@ h2{
 #formation .cards h3{
     background: seagreen;
 }
-#formation .cards li{
-    height: 22vh;
-}
-#formation .cards figure{
-    min-height: 100%;
-}
 #formation figcaption{
     display: grid;
     place-content: center;
     font-size: 1rem;
-    line-height: 1.3em;
     padding: 1em;
     text-align: center;
     width: 100%;
@@ -413,6 +425,7 @@ footer a{
         width: 100%;
         max-height: 100%;
         line-height: 1.2em;
+        overflow-x: hidden;
     }
     [type=button], button{
         background: black;
@@ -425,7 +438,6 @@ footer a{
     header .expand{
         left : 0;
     }
-
     img{
         display: block;
         margin: auto;
@@ -440,35 +452,56 @@ footer a{
         right: 0;
         z-index: 2;
     }
-
+    #banner{
+        display: grid;
+        place-content: center;
+    }
     #banner>aside{
         position: static;
-        margin: auto;
-        max-width: 50%;
+        max-width: 100%;
     }
 
     #banner>aside::before{
         content: "Ruben Trottein";
         font-size: 2rem;
+        line-height: 2rem;
         text-align: center;
         display: block;
         margin-bottom: 1em;
         font-family: monospace;
         color: rebeccapurple;
     }
-
+    #hero>article{
+        flex-direction: column-reverse;
+    }
+    #hero article h2{
+        background: white;
+    }
+    #hero article .callTo{
+        display: flex;
+        flex-direction: row;
+        backdrop-filter: blur(15px);
+    }
     #projects figure{
         max-width: 100%;
         max-height: 100%;
     }
 
+    #services figure{
+        width: 95%;
+    }
 
     #services article{
         flex-direction: column;
     }
-
-    #formation .modals{
-        display: none;
+    #about{
+        padding: 1em;
+    }
+    #about article{
+        position: static;
+        top:0;
+        width: 100%;
+        margin: 0;
     }
     
     #formation .cards li{
