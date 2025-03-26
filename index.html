@@ -15,15 +15,24 @@
     <img src="media/hamburger.png" class="menu" />
     <header>
         <h1><a href="#about">Ruben Trottein</a></h1>
+        
+        <div class="reseaux">
+            <a href="https://www.linkedin.com/in/ruben-trottein/"><img src="media/LinkedIn-Blue-96-Γäó@2x.png" title="LinkedIn" alt="LinkedIn"/></a>
+            <a href="https://github.com/rubentrottein"><img src="media/github-mark-white.png" title="GitHub" alt="GitHub"/></a>
+            <a href="https://www.malt.fr/profile/rubentrottein"> <img src="media/Malt_logo_pink.png" title="Malt" alt="Malt"/></a>
+        </div>
+        
         <nav>
             <a href="#">Accueil</a>
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#about">A propos</a>
             <a href="#formation">Formation</a>
-            <a href="#">Technologies</a>
+            <a href="#experiences">Expériences</a>
+            <a href="#contact" type="button" class="callToButton">Contact</a>
             <!--
                 <a href="#">Organisation</a>
+                <a href="#">Technologies</a>
             -->
         </nav>
     </header>
@@ -36,7 +45,12 @@
                     <a type="button" href="#portfolio">Projets</a>
                     <a type="button" href="#about">CV</a>
                 </div>
-                <a href="https://github.com/rubentrottein">lien GitHub</a>
+                
+                <div class="reseaux">
+                    <a href="https://www.linkedin.com/in/ruben-trottein/"><img src="media/LinkedIn-Blue-96-Γäó@2x.png" title="LinkedIn" alt="LinkedIn"/></a>
+                    <a href="https://github.com/rubentrottein"><img src="media/GitHub_(4).svg" title="GitHub" alt="GitHub"/></a>
+                    <a href="https://www.malt.fr/profile/rubentrottein"> <img src="media/Malt_logo_pink.png" title="Malt" alt="Malt"/></a>
+                </div>
             </aside>
         </section>
         
@@ -50,7 +64,7 @@
                 </aside>
                 <aside class="callTo">
                     <h3>Formation</h3>
-                    <a href="#formation" type="button" >En savoir +</a>
+                    <a href="#services" type="button" >En savoir +</a>
                         <!--
                     -->
                 </aside>
@@ -78,7 +92,7 @@
                     <img src="media/business-3736939_640.jpg" alt="">
                     <figcaption>
                         <h3>Votre organisation</h3>
-                        <p>Je m'adresse a tout type d'organisation :</p>
+                        <p>Je m'adresse a tout type d'organisation:</p>
                         <ul>
                             <li>Associations</li>
                             <li>Entreprises </li>
@@ -93,11 +107,12 @@
                     <img src="media/business-4051773_640.jpg" alt="">
                     <figcaption>
                         <h3>Mes services :</h3>
-                        <p>Autour de l'informatique, je peux vous aider dans les domaines suivants</p>
+                        <p>Autour de l'informatique, je peux vous aider dans les domaines suivants:</p>
                         <ul>
                             <li>Spécification, conception, création, refonte de sites et applications web</li>
                             <li>Accompagnement vers la numérisation des outils et des profils de l'entreprise</li>
                             <li>Aide à l'informatisation et au développement sur les réseaux</li>
+                            <li>Formation autour des nouvelles technologies</li>
                         </ul>
                     </figcaption>
                 </figure>
@@ -111,7 +126,7 @@
                             <li>Sites mobiles</li>
                             <li>Applications web (webapp) ou mobiles natives</li>
                             <li>Documents et schémas de conceptions</li>
-                            <li>Présentations</li>
+                            <li>Présentations et slides</li>
                             <li>Formation en informatique générale</li>
                             <li>Formation en developpement web</li>
                         </ul>
@@ -128,9 +143,9 @@
                 </article>
             </aside>
             <article id="projects">
-                <h2>Sites statiques</h2>
+                <h3>Sites statiques</h3>
                 <div class="static-website"></div>
-                <h2>Sites dynamiques</h2>
+                <h3>Sites dynamiques</h3>
                 <div class="dynamic-website"></div>
             </article>
         </section>
@@ -138,23 +153,26 @@
         <section id="about">
             <article>
                 <h2>A propos de moi</h2>
-                <img src="https://mistertea.fr/pro/media/img/profile.jpg" alt="Photo de Ruben Trottein, un homme barbu plutôt avenant et sympathique">
-                <p>
-                    Diplômé en organisation et reconverti en développeur web depuis 2018, je me suis spécialisé dans le développement Front-end et l'intégration, mais suis capable de conduire des projets dans leur aspect back-end également. Mon objectif aujourd'hui est de mettre en oeuvre des projets visuellement propres et efficaces aux fonctionnalités abouties et agréables à utiliser
-                </p>
-                <p>
-                    Après un diplôme RNCP de niveau 6 de Concepteur Développeur d'Applications, je souhaite exercer autour de la mise en place de solutions utiles et complètes à destination des entreprises, associations et particuliers désireux de s'informatiser ou d'offrir des fonctionnalités modernes à leur activité en ligne
-                </p>
-                <aside>
-                    <div>
-                        <a href="https://www.canva.com/design/DAF6U4AMh50/XKQgQA0XDMbsPr-briNOig/view?utm_content=DAF6U4AMh50&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank">
-                            <i>Visualiser mon CV (canva)</i>
-                            <p>📄</p>
-                        </a>
-                    </div>
-                    <a href="documents/cv_trottein_octobre_2024.pdf" target="_blank">Télécharger le CV</a>
-                    <a href="cv.html" target="_blank">Version Texte du CV (IA, Accessibilité)</a>
-                </aside>
+                <div>
+
+                    <img src="https://mistertea.fr/pro/media/img/profile.jpg" alt="Photo de Ruben Trottein, un homme barbu plutôt avenant et sympathique">
+                    <p>
+                        Diplômé en organisation et reconverti en développeur web depuis 2018, je me suis spécialisé dans le développement Front-end et l'intégration, mais suis capable de conduire des projets dans leur aspect back-end également. Mon objectif aujourd'hui est de mettre en oeuvre des projets visuellement propres et efficaces aux fonctionnalités abouties et agréables à utiliser
+                    </p>
+                    <p>
+                        Après un diplôme RNCP de niveau 6 de Concepteur Développeur d'Applications, je souhaite exercer autour de la mise en place de solutions utiles et complètes à destination des entreprises, associations et particuliers désireux de s'informatiser ou d'offrir des fonctionnalités modernes à leur activité en ligne
+                    </p>
+                    <aside>
+                        <div>
+                            <a href="https://www.canva.com/design/DAF6U4AMh50/XKQgQA0XDMbsPr-briNOig/view?utm_content=DAF6U4AMh50&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank">
+                                <i>Visualiser mon CV (canva)</i>
+                                <p>📄</p>
+                            </a>
+                        </div>
+                        <a href="documents/cv_trottein_octobre_2024.pdf" target="_blank">Télécharger le CV</a>
+                        <a href="cv.html" target="_blank">Version essentielle du CV (IA, Accessibilité)</a>
+                    </aside>
+                </div>
             </article>
         </section>
 
@@ -373,10 +391,93 @@
                 </div>
             </article>
         </section>
+        
+        <section id="experiences">
+            <h2>Dernières Expériences Professionnelles</h2>
+            
+            <article class="experience">
+                <aside>
+                    <h3>Développeur Symfony – BIYN Learning</h3>
+                    <ul>
+                        <li>Développement d’un LMS (Learning Management System)</li>
+                        <li>Conception et mise en place du modèle de données et du back-end</li>
+                        <li>Création d’un environnement de test</li>
+                        <li>Développement de l’interface utilisateur</li>
+                    </ul>
+                </aside>
+                <p>2024</p>
+            </article>
+            
+            <article class="experience">
+                <aside>
+                    <h3>Développeur & Formateur Web – Freelance</h3>
+                    <ul>
+                        <li>Formation et accompagnement en développement web (HTML, CSS, JS, PHP, frameworks)</li>
+                        <li>Tutorat et intervention en développement Web Front-End et généraliste</li>
+                        <li>Suivi et accompagnement des élèves en formation adulte</li>
+                        <li>Développement et optimisation de sites web et applications interactives</li>
+                        <li>Veille technique sur les technologies émergentes</li>
+                        <li>Stack utilisée : HTML / CSS / JavaScript / PHP / React / WordPress</li>
+                    </ul>
+                </aside>
+                <p>2020 - En cours</p>
+            </article>
+            
+            <article class="experience">
+                <aside>
+                    <h3>Ingénieur en Développement Java / .NET – ACTIV’CONSULT’ING</h3>
+                    <ul>
+                        <li>Formation intensive en Java/JEE et Angular</li>
+                        <li>Développement d’une POC en ASP.Net / C#</li>
+                        <li>Intégration de modules sur un logiciel de Data Visualisation (Qlik) en HTML/CSS/JS</li>
+                        <li>Travail sur des projets liés à l’optimisation et aux nouvelles technologies</li>
+                    </ul>
+                </aside>
+                <p>2018 - 2019</p>
+            </article>
+            
+            <article class="experience">
+                <aside>
+                    <h3>Développeur Web – NEEXIUM DIGITAL</h3>
+                    <ul>
+                        <li>Mise en place d’un site sous WordPress / WooCommerce</li>
+                        <li>Rédaction du cahier des charges et gestion du debugging</li>
+                        <li>Recherche de solutions et optimisation du site</li>
+                        <li>Stack utilisée : PHP, HTML, CSS, JavaScript</li>
+                    </ul>
+                </aside>
+                <p>2018</p>
+            </article>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <img class="profile-pic" src="media/img/profile.jpg" alt="Photo de profil">
+                    <div class="contact-text">
+                        <p><strong>Ruben Trottein</strong></p>
+                        <p>Développeur Web & Formateur</p>
+                        <p>📞 <a href="tel:+33659185156">+33 6 59 18 51 56</a></p>
+                        <p>📧 <a href="mailto:ruben.trottein@gmail.com">ruben.trottein@gmail.com</a></p>
+                    </div>
+                </div>
+                <h3>Mes réseaux sociaux</h3>
+                <div class="reseaux">
+                    <a href="https://www.linkedin.com/in/ruben-trottein/"><img src="media/LinkedIn-Blue-96-Γäó@2x.png" title="LinkedIn" alt="LinkedIn"/></a>
+                    <a href="https://github.com/rubentrottein"><img src="media/GitHub_(4).svg" title="GitHub" alt="GitHub"/></a>
+                    <a href="https://www.malt.fr/profile/rubentrottein"> <img src="media/Malt_logo_pink.png" title="Malt" alt="Malt"/></a>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <p>&copy; mistertea.fr - 2024</p>
         <a href="#">Accueil</a>
+        <div class="reseaux">
+            <a href="https://www.linkedin.com/in/ruben-trottein/"><img src="media/LinkedIn-Blue-96-Γäó@2x.png" title="LinkedIn" alt="LinkedIn"/></a>
+            <a href="https://github.com/rubentrottein"><img src="media/github-mark-white.png" title="GitHub" alt="GitHub"/></a>
+            <a href="https://www.malt.fr/profile/rubentrottein"> <img src="media/Malt_logo_pink.png" title="Malt" alt="Malt"/></a>
+        </div>
         <aside>
             <p><a href="https://www.flaticon.com/free-icons/hamburger" title="hamburger icons">Hamburger icons created by Lizel Arina - Flaticon</a></p>
         </aside>

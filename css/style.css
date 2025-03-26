@@ -48,6 +48,9 @@ h2{
     font-weight: 100;
     font-size: 2rem;
 }
+section{
+    padding-top: 15dvh;    
+}
 .menu{
     display: none;
 }
@@ -84,9 +87,24 @@ h2{
     background: rgba(0,0,0,.8);
     border-radius: 0 0 1em 1em;
 }
+.reseaux{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+.reseaux img, .reseaux svg{
+    height: 3vh;
+}
+.reseaux a img {
+    transition: transform 0.3s;
+}
+.reseaux a img:hover {
+    transform: scale(1.2);
+}
+
 /************************   Bannière    *************************/
 #banner{
-    min-height:80dvh;
+    min-height:90dvh;
     transition: all .5s;
 }
 #banner:hover{
@@ -100,7 +118,7 @@ h2{
     position: relative;
     padding: 1em;
     left:5em;
-    top: 50dvh;
+    top: 40dvh;
     backdrop-filter: blur(10px);
     background: rgba(255,255,255,.5);
     border-radius: .5em;
@@ -116,10 +134,18 @@ h2{
 #banner i{
     font-size: 1.5rem;
 }
-
+.reseaux{
+    padding-top: 1em;
+    display: flex;
+    align-items: center;
+}
+.reseaux img{
+    max-width: 100%;
+}
 /********************************     Hero section    *************************************/
 #hero{
     box-shadow: 0 0 15px black;
+    padding-top: 0;
 }
 #hero article{
     display: flex;
@@ -140,13 +166,12 @@ h2{
     display: block;
 }
 
-
-.callTo, .matrix{
+.callTo, .matrix, .callToButton{
     display: grid;
     place-content: center;
     text-align: center;
 }
-.callTo button, .callTo [type="button"]{
+.callTo button, .callTo [type="button"], .callToButton{
     padding: 1em;
     min-width: 10dvw;
     margin:1em auto;
@@ -175,7 +200,7 @@ h2{
 #services img{
     width: 100%;
     object-fit: cover;
-    height: 25vh;
+    height: 20vh;
     border-radius: 1em 1em 0 0;
 }
 #services article{
@@ -188,14 +213,12 @@ h2{
     padding: 4em 0;
 }
 #services h2, #services h3{
-    background: black;
     color: #eee;
-    padding: .5em;
     width: 100%;
     text-align: center;
 }
 #services figure{
-    min-height: 80vmin;
+    min-height: 65vmin;
     width: 25vw;
     padding: 0;
     background: #eee;
@@ -204,11 +227,12 @@ h2{
     box-shadow: 0 0 10px #444;
     color: black;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 #services figcaption p{
     text-align: center;
-    padding: .2em 1em;
+    padding: 1em;
+    font-size: 1.2rem;
 }
 #services figcaption ul{
     padding: 0 2em;
@@ -223,8 +247,8 @@ h2{
 #portfolio{
     width: 95%;
     border-radius: 1em;
+    padding : 15dvh 5em 2em 5em;
     margin:3em auto;
-    padding: 5em;
     background: rgba(0,0,0,.5); 
     backdrop-filter: blur(15px);
 }
@@ -232,7 +256,12 @@ h2{
     display: flex;
     justify-content: space-between;
 }
-
+#portfolio h3{
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 100;
+}
 
 /*****************************  Section Projets  *******************************/
 
@@ -283,26 +312,29 @@ h2{
 /************   A propos    ****************/
 
 #about{
-    background: black;
     background-size: cover;
-    padding: 5em;
-    margin-top: 2em;
+    margin: 10em auto 0 auto;
+    height: 30dvh;
 }
 #about h2{
     color: teal;
     text-align: center;
 }
 #about article{
+    border-radius: .5em;
+    padding: 1em;
+    background: radial-gradient(rgba(255, 255, 255, 0.7), rgba(195, 197, 245, 0.806));
+    backdrop-filter: blur(12px);
+    width: 85%;
+    margin: -2em auto;
+    transform: translateY(em);
+}
+#about div{
     display: flex;
     gap: 3em;
     justify-content: space-between;
     align-items: center;
-    border-radius: .5em;
-    padding: 1em;
-    background: rgba(255,255,255,.8);
-    backdrop-filter: blur(12px);
-    width: 90%;
-    margin: -7em auto;
+    
 }
 #about img{
     border-radius: 50%;
@@ -327,7 +359,6 @@ h2{
 
 /*************  Formation   **********************/
 #formation{
-    background: black;
     overflow-x: hidden;
     text-align: center;
     padding: 10em 0;
@@ -349,7 +380,7 @@ h2{
     box-shadow: 0 0 20px black;
 }
 #formation .cards h3{
-    background: seagreen;
+    background: teal;
 }
 #formation figcaption{
     display: grid;
@@ -365,7 +396,7 @@ h2{
 }
 #formation .description{
     background: linear-gradient(aliceblue, whitesmoke);
-    padding: 2em;
+    padding: 1em;
     line-height: 1.3em;
 }
 
@@ -385,9 +416,9 @@ h2{
     color: coral;
 }
 #formation .description ul{
-    width: 60%;
+    width: 70%;
     text-align: left;
-    margin: 1em auto;
+    margin: 0 auto;
     max-height: 100dvh;
 }
 #formation .modals{
@@ -404,6 +435,104 @@ h2{
     backdrop-filter: blur(15px);
     transition: left .5s;
 }
+/********************* Experience Professionnelle *****************/
+#experiences{
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding-top: 15dvh;
+    padding-bottom: 1dvh;
+}
+.experience {
+    width: 90%;
+    margin: 4em auto;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    padding: 2em;
+    padding-top: 15dvh;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #444;
+}
+#experiences h2 {
+    text-align: center;
+    color: gold;
+    margin-bottom: 1em;
+}
+.experience {
+    padding: 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+.experience ul {
+    margin-top: 0.5em;
+    padding-left: 1.5em;
+}
+.experience aside, .experience>p{
+    padding: 1em;
+}
+.experience p{
+    background: #444;
+    display:grid;
+    place-content: center;
+    font-size: 2rem;
+    width: 20dvw;
+    border-radius: 0 10px 10px 0;
+    color: gold;
+}
+/****************************** Contact **************************/
+
+
+#contact {
+    width: 90%;
+    margin: 4em auto;
+    background: radial-gradient(#00000077, #ffffff55);
+    backdrop-filter: blur(15px);
+    color: #333;
+    padding: 2em;
+    border-radius: 10px;
+    border: 1px white solid;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+#contact h2{
+    color: black;
+    padding: 1em;
+}
+#contact .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#contact .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    margin-bottom: 1.5em;
+}
+#contact .contact-text {
+    text-align: left;
+}
+#contact .contact-text p {
+    margin: 0.3em 0;
+    font-size: 1.2em;
+}
+#contact .contact-text a {
+    color: #2c3e50;
+    font-weight: bold;
+    transition: .3s;
+}
+#contact .contact-text a:hover {
+    text-decoration: underline;
+    color: steelblue;
+}
+#contact img.profile-pic {
+    width: 15vmax;
+    height: 15vmax;
+    border-radius: 1em;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 footer{
     background: black;
     color: white;
@@ -435,6 +564,14 @@ footer a{
         left : -100dvw;
     }
 
+    .reseaux{
+        display: flex;
+        flex-direction: row;
+    }
+    .reseaux img, .reseaux svg{
+        height: 100%;
+        width: 20dvh;
+    }
     header .expand{
         left : 0;
     }
@@ -496,6 +633,7 @@ footer a{
     }
     #about{
         padding: 1em;
+        height: 100%;
     }
     #about article{
         position: static;
