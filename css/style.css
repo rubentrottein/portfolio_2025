@@ -241,6 +241,9 @@ section{
 #services figcaption li{
     padding-top: .3em;
 }
+#services figcaption{
+    padding-bottom: 1em;
+}
 
 /*****************************  Section Portfolio  *******************************/
 
@@ -338,7 +341,9 @@ section{
 }
 #about img{
     border-radius: 50%;
-    width: 10dvw;
+    min-width: 30vh;
+    height: 30vh;
+    object-fit: cover;
 }
 #about p{
     width: 90%;
@@ -381,6 +386,9 @@ section{
 }
 #formation .cards h3{
     background: teal;
+}
+#formation figure{
+    height:20dvh;
 }
 #formation figcaption{
     display: grid;
@@ -525,9 +533,9 @@ section{
     text-decoration: underline;
     color: steelblue;
 }
-#contact img.profile-pic {
-    width: 15vmax;
-    height: 15vmax;
+#contact .profile-pic {
+    width: 15dvmax;
+    height: 15dvmax;
     border-radius: 1em;
     object-fit: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -551,13 +559,13 @@ footer a{
         margin: 0;
         flex-wrap: wrap;
         max-width: 100%;
-        width: 100%;
         max-height: 100%;
         line-height: 1.2em;
         overflow-x: hidden;
+        font-size: .9rem;
     }
     [type=button], button{
-        background: black;
+        background: rgba(0,0,0,.4);
         text-align: left;
     }
     header{
@@ -565,12 +573,9 @@ footer a{
     }
 
     .reseaux{
-        display: flex;
         flex-direction: row;
-    }
-    .reseaux img, .reseaux svg{
-        height: 100%;
-        width: 20dvh;
+        flex-wrap: nowrap;
+        margin: auto;
     }
     header .expand{
         left : 0;
@@ -578,15 +583,15 @@ footer a{
     img{
         display: block;
         margin: auto;
-        max-width: 70%;
+        max-width: 100%;
     }
 
     .menu{
         display: block;
         width: 4dvw;
         position: fixed;
-        top:0;
-        right: 0;
+        top:.5em;
+        right: .5em;
         z-index: 2;
     }
     #banner{
@@ -618,12 +623,19 @@ footer a{
         display: flex;
         flex-direction: row;
         backdrop-filter: blur(15px);
+        font-size: .9em;
+    }
+    
+    #hero aside{
+        flex-wrap: nowrap;
     }
     #projects figure{
         max-width: 100%;
         max-height: 100%;
     }
-
+    #portfolio {
+        padding: 1em;
+    }
     #services figure{
         width: 95%;
     }
@@ -637,12 +649,37 @@ footer a{
     }
     #about article{
         position: static;
+        transform: translateY(0);
         top:0;
         width: 100%;
         margin: 0;
     }
-    
+    #formation figure{
+        flex-wrap: nowrap;
+        height: 14dvh;
+    }
     #formation .cards li{
-        height: 100%;
+        min-height: 100%;
+        width: 100%;
+    }
+    #formation .modals h3, #formation .modals p{
+        font-size: .5em;
+    }
+    #contact .contact-text a{
+        color: orange;
+    }
+    #contact{
+        color: #eee;
+    }
+    .profile-pic{
+        max-width: 20vw;
+        border-radius: 10px;
+        position: absolute;
+        top:-2dvh;
+        left: -2dvw;
+    }
+    #experiences p{
+        width: 100%;
+        border-radius: 0;
     }
 }

@@ -10,7 +10,7 @@ window.addEventListener("scroll", ()=>{
     } else {
         header.style.background="transparent";
         title.style.fontSize="2em";
-        for(let link of links){ link.style.color ="black";}
+        for(let link of links){ link.style.color ="white";}
     }
     
     if(window.scrollY >= 750){
