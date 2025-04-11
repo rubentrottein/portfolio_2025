@@ -33,14 +33,14 @@ for(let diploma of ["comc","cda", "diw", "poei"]){
         diplomaDetails(diploma);
     })
 }
-/*
-document.querySelector("table").addEventListener("click", ()=>{
-    document.querySelector(".description-modal").style.left = 0;
-})
-document.querySelector(".description-modal").addEventListener("click", ()=>{
-    document.querySelector(".description-modal").style.left = "-100%";
-})
-    */
+/* Disposition tableau *
+    document.querySelector("table").addEventListener("click", ()=>{
+        document.querySelector(".description-modal").style.left = 0;
+    })
+    document.querySelector(".description-modal").addEventListener("click", ()=>{
+        document.querySelector(".description-modal").style.left = "-100%";
+    })
+/***/
 
 document.querySelector(".menu").addEventListener("click", ()=>{
     console.log("click");
